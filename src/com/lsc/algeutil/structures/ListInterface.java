@@ -1,5 +1,12 @@
 package com.lsc.algeutil.structures;
 
+/**
+ * List provide such basic operations for a list of data as:
+ *  search,insert,delete,length
+ * @author charlieliu
+ *
+ * @param <T>
+ */
 public interface ListInterface<T> {
 
 	/**
@@ -12,7 +19,9 @@ public interface ListInterface<T> {
 	
 	/**
 	 * insert an element to the list
-	 * @param o
+	 * @param o the data to insert
+	 * @throws Exception if data can not be inserted probably bacause the data 
+	 * are not perfected follows the principle of the container
 	 */
 	abstract public void Insert(T o);
 	

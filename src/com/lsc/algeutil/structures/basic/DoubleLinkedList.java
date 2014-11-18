@@ -34,7 +34,7 @@ public class DoubleLinkedList<T> implements ListInterface<T>{
 	public void Insert(T o) {
 		// TODO Auto-generated method stub
 		DoubleLinkedNode<T> node = new DoubleLinkedNode<T>(o, head, null);
-		head.prev = node;
+		if(head != null) head.prev = node;
 		head = node;
 	}
 

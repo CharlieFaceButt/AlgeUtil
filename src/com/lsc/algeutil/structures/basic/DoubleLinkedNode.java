@@ -1,6 +1,8 @@
 package com.lsc.algeutil.structures.basic;
 
-public class DoubleLinkedNode<T>{
+import com.lsc.algeutil.structures.KeyTaggedDataParents;
+
+public class DoubleLinkedNode<T> extends KeyTaggedDataParents<T,T>{
 	
 	private T data;
 	public DoubleLinkedNode<T> next;
@@ -12,8 +14,20 @@ public class DoubleLinkedNode<T>{
 		this.next = next;
 		this.prev = prev;
 	}
-
-	public T getKey(){
+	@Override
+	public T getKey() {
+		// TODO Auto-generated method stub
 		return data;
 	}
+	@Override
+	public T generateKey(T data) {
+		// TODO Auto-generated method stub
+		return data;
+	}
+	@Override
+	public T getData() {
+		// TODO Auto-generated method stub
+		return data;
+	}
+
 }
