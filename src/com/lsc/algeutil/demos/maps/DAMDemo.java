@@ -26,7 +26,12 @@ public class DAMDemo extends Demo{
 		System.out.println(map.toString());
 		System.out.println("has blingbling? " + map.SearchByData(sdd.getData()));
 		
-		map.DeleteByData("blublu");
+		try {
+			map.DeleteByData("blublu");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println(map.toString());
 	}
 }

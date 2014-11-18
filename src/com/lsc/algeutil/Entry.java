@@ -1,10 +1,13 @@
 package com.lsc.algeutil;
 
+import java.util.HashMap;
+
 import com.lsc.algeutil.demos.Demo;
 import com.lsc.algeutil.demos.DoubleLinkedListDemo;
 import com.lsc.algeutil.demos.SinglyLinkedListDemo;
 import com.lsc.algeutil.demos.StandardStackDemo;
 import com.lsc.algeutil.demos.maps.DAMDemo;
+import com.lsc.algeutil.demos.maps.SHMDemo;
 
 /**
  * Main entry to test algorithms
@@ -19,7 +22,7 @@ public class Entry {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Demo demo = new DAMDemo();
+		Demo demo = new SHMDemo();
 		demo.run();
 	}
 

@@ -1,26 +1,17 @@
 package com.lsc.algeutil.demos.maps;
 
-import com.lsc.algeutil.structures.KeyTaggedDataParents;
+import com.lsc.algeutil.structures.KeyTaggedDataBean;
 
-public class StringDAMData extends KeyTaggedDataParents<Integer,String>{
+public class StringDAMData extends KeyTaggedDataBean<Integer,String>{
 
-	private String data;
-	private Integer key = -1;
 	public static int DEFAULT_RANGE = 512;
 	
 	public StringDAMData(String data) {
-		super();
-		this.data = data;
+		super(null,data);
 		this.key = generateKey(data);
 	}
 
-
-	public Integer getKey() {
-		// TODO Auto-generated method stub
-		return key;
-	}
-
-
+	@Override
 	public Integer generateKey(String data) {
 		// TODO Auto-generated method stub
 		if(data == null) return -1;
@@ -30,12 +21,6 @@ public class StringDAMData extends KeyTaggedDataParents<Integer,String>{
 		}
 		key %= DEFAULT_RANGE;
 		return key;
-	}
-
-
-	public String getData() {
-		// TODO Auto-generated method stub
-		return data;
 	}
 
 }
