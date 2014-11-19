@@ -5,7 +5,7 @@ import com.lsc.algeutil.structures.MapObject;
 /**
  * A map of elements that are listed by their key values which are directly
  * mapped to the index of the storing list. The key values of those data are
- * java.lang.Integer and data must has no collision with other data, otherwise
+ * java.lang.Integer and must has no collision with other keys, otherwise
  * data may lost during insert.
  * @author charlieliu
  *

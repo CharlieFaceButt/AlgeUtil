@@ -15,7 +15,8 @@ public class SHMDemo extends Demo {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		StandardHashMap<String, String> map = new StandardHashMap<String, String>(new FullDomainHash<String>(9991));
+		long domain = 0xffffffffl;
+		StandardHashMap<String, String> map = new StandardHashMap<String, String>(new FullDomainHash<String>(domain));
 		map.Insert("holi", "philosopher");
 		map.Insert("charlie", "engineer");
 		System.out.println("has philosopher? " + map.SearchByKey("holi"));

@@ -166,7 +166,7 @@ public class StandardHashMap<K,D> extends MapObject<K, D>{
 	public String toString() {
 		// TODO Auto-generated method stub
 		String result = super.toString();
-		result += "\n - hashing method:" + hashFunc.getClass();
+		result += "\n - hashing method:" + hashFunc.toString();
 		result += "\n - " + GetCount() + "data stored";
 		result += "\n - " + getOccupiedSlotNum() + "/" + list.length + "slots occupied";
 		return result;
