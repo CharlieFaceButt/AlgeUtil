@@ -1,6 +1,7 @@
 package com.lsc.algeutil.demos.maps;
 
 import com.lsc.algeutil.demos.Demo;
+import com.lsc.algeutil.structures.basic.maps.FullDomainHash;
 import com.lsc.algeutil.structures.basic.maps.MultiplyHash;
 import com.lsc.algeutil.structures.basic.maps.StandardHashMap;
 
@@ -14,7 +15,7 @@ public class SHMDemo extends Demo {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		StandardHashMap<String, String> map = new StandardHashMap<String, String>(128);
+		StandardHashMap<String, String> map = new StandardHashMap<String, String>(new FullDomainHash<String>(9991));
 		map.Insert("holi", "philosopher");
 		map.Insert("charlie", "engineer");
 		System.out.println("has philosopher? " + map.SearchByKey("holi"));

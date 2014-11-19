@@ -155,7 +155,7 @@ public class StandardHashMap<K,D> extends MapObject<K, D>{
 	 * 获得存有数据的槽的数量
 	 * @return
 	 */
-	public int getOccupiedSlot(){
+	public int getOccupiedSlotNum(){
 		int re = 0;
 		for(int i=0 ; i<list.length ; i++){
 			if(list[i] != null) re ++; 
@@ -168,7 +168,7 @@ public class StandardHashMap<K,D> extends MapObject<K, D>{
 		String result = super.toString();
 		result += "\n - hashing method:" + hashFunc.getClass();
 		result += "\n - " + GetCount() + "data stored";
-		result += "\n - " + getOccupiedSlot() + "/" + list.length + "slots occupied";
+		result += "\n - " + getOccupiedSlotNum() + "/" + list.length + "slots occupied";
 		return result;
 	}
 }
