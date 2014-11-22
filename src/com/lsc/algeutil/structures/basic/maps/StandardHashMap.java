@@ -1,10 +1,21 @@
 package com.lsc.algeutil.structures.basic.maps;
 
 import com.lsc.algeutil.structures.HashingInterface;
-import com.lsc.algeutil.structures.KeyTaggedDataBean;
-import com.lsc.algeutil.structures.MapObject;
+import com.lsc.algeutil.structures.basic.KeyTaggedDataBean;
 import com.lsc.algeutil.structures.basic.SinglyLinkedNode;
 
+/**
+ * A standard hash map will use multiplyHash as default hashing method, <br>
+ * but hashing method can be replaced by using other implementations of <br>
+ * hashingInterface.
+ * Further more it is still extends MapObject so that it can define how <br>
+ * generate a key according to the data, method can be customized by <br>
+ * implementing 
+ * @author charlieliu
+ *
+ * @param <K> the key type
+ * @param <D> the data type
+ */
 public class StandardHashMap<K,D> extends MapObject<K, D>{
 
 	public static int MAX_SLOT_NUM = 1024;
@@ -130,7 +141,8 @@ public class StandardHashMap<K,D> extends MapObject<K, D>{
 	@Override
 	public K computeKey(D data) {
 		// TODO Auto-generated method stub
-		return null;
+		KeyTaggedDataBean<K, D> bean = new KeyTaggedDataBean<K, D>(null, data);
+		return bean.generateKey(data);
 	}
 
 	@Override
@@ -152,7 +164,7 @@ public class StandardHashMap<K,D> extends MapObject<K, D>{
 	}
 
 	/**
-	 * 获得存有数据的槽的数量
+	 * Get the number of slots that have stored data
 	 * @return
 	 */
 	public int getOccupiedSlotNum(){

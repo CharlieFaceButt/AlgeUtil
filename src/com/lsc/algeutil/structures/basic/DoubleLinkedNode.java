@@ -1,6 +1,5 @@
 package com.lsc.algeutil.structures.basic;
 
-import com.lsc.algeutil.structures.KeyTaggedDataBean;
 
 public class DoubleLinkedNode<T> extends KeyTaggedDataBean<T,T>{
 	

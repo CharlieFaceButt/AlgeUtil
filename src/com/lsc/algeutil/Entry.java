@@ -8,6 +8,8 @@ import com.lsc.algeutil.demos.SinglyLinkedListDemo;
 import com.lsc.algeutil.demos.StandardStackDemo;
 import com.lsc.algeutil.demos.maps.DAMDemo;
 import com.lsc.algeutil.demos.maps.SHMDemo;
+import com.lsc.algeutil.demos.trees.BTreeDemo;
+import com.lsc.algeutil.demos.trees.RBTreeDemo;
 
 /**
  * Main entry to test algorithms
@@ -22,7 +24,7 @@ public class Entry {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Demo demo = new SHMDemo();
+		Demo demo = new RBTreeDemo();
 		demo.run();
 	}
 

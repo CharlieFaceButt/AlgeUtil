@@ -1,4 +1,6 @@
-package com.lsc.algeutil.structures;
+package com.lsc.algeutil.structures.basic.maps;
+
+import com.lsc.algeutil.structures.basic.KeyTaggedDataBean;
 
 /**
  * Map basically contains the rules of mapping the data with keys, this 

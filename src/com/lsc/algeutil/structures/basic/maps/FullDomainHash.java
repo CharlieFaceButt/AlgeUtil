@@ -2,6 +2,13 @@ package com.lsc.algeutil.structures.basic.maps;
 
 import com.lsc.algeutil.structures.HashingInterface;
 
+/**
+ * This implement the hashing of a hash map, using full domain method<br>
+ * Details see Chapter 11 in book Introduction of Algorithm 
+ * @author charlieliu
+ *
+ * @param <K> the Key
+ */
 public class FullDomainHash<K> implements HashingInterface<K> {
 
 	/**

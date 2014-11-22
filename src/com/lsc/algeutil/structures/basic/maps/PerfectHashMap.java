@@ -1,8 +1,13 @@
 package com.lsc.algeutil.structures.basic.maps;
 
 import com.lsc.algeutil.structures.HashingInterface;
-import com.lsc.algeutil.structures.MapObject;
 
+/**
+ * -_-unfinished
+ * @author charlieliu
+ *
+ * @param <D>
+ */
 public class PerfectHashMap<D> extends MapObject<Integer, D> {
 
 	private StandardHashMap<Integer, D>[] list = null;

@@ -1,6 +1,6 @@
 package com.lsc.algeutil.demos.maps;
 
-import com.lsc.algeutil.structures.KeyTaggedDataBean;
+import com.lsc.algeutil.structures.basic.KeyTaggedDataBean;
 
 public class StringDAMData extends KeyTaggedDataBean<Integer,String>{
 

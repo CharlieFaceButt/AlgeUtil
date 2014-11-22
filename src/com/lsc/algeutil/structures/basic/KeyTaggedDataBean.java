@@ -1,4 +1,4 @@
-package com.lsc.algeutil.structures;
+package com.lsc.algeutil.structures.basic;
 
 /**
  * This bean attaches a data with a key value
@@ -15,8 +15,8 @@ public class KeyTaggedDataBean<K,D> {
 	
 	public KeyTaggedDataBean(K key, D data) {
 		super();
-		this.key = key;
 		this.data = data;
+		this.key = key;
 	}
 	public K getKey(){
 		return key;

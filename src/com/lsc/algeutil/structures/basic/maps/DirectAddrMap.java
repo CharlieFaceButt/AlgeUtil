@@ -1,6 +1,5 @@
 package com.lsc.algeutil.structures.basic.maps;
 
-import com.lsc.algeutil.structures.MapObject;
 
 /**
  * A map of elements that are listed by their key values which are directly
