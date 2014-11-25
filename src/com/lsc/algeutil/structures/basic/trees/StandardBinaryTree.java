@@ -120,9 +120,9 @@ public class StandardBinaryTree<D> implements SearchTreeInterface<Integer, D> {
 		BinaryTreeNode<D> child = null;
 		if(delete.left != null) child = delete.left;
 		else child = delete.right;
-		if(child != null) child.parent = delete.parent;
 		
 		/*when doing the real deletion, link the node's parent and its child*/
+		if(child != null) child.parent = delete.parent;
 		/*when it is the root you want to delete*/
 		if(delete.parent == null) root = child;
 		else if(delete == delete.parent.left)

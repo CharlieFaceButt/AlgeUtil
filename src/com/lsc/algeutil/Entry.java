@@ -8,6 +8,7 @@ import com.lsc.algeutil.demos.SinglyLinkedListDemo;
 import com.lsc.algeutil.demos.StandardStackDemo;
 import com.lsc.algeutil.demos.maps.DAMDemo;
 import com.lsc.algeutil.demos.maps.SHMDemo;
+import com.lsc.algeutil.demos.trees.AVLTreeDemo;
 import com.lsc.algeutil.demos.trees.BTreeDemo;
 import com.lsc.algeutil.demos.trees.RBTreeDemo;
 
@@ -24,7 +25,7 @@ public class Entry {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Demo demo = new RBTreeDemo();
+		Demo demo = new AVLTreeDemo();
 		demo.run();
 	}
 
