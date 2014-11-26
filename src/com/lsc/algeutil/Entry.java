@@ -5,6 +5,7 @@ import java.util.HashMap;
 import com.lsc.algeutil.demos.Demo;
 import com.lsc.algeutil.demos.DoubleLinkedListDemo;
 import com.lsc.algeutil.demos.SinglyLinkedListDemo;
+import com.lsc.algeutil.demos.SortingDemo;
 import com.lsc.algeutil.demos.StandardStackDemo;
 import com.lsc.algeutil.demos.maps.DAMDemo;
 import com.lsc.algeutil.demos.maps.SHMDemo;
@@ -25,7 +26,7 @@ public class Entry {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Demo demo = new AVLTreeDemo();
+		Demo demo = new SortingDemo();
 		demo.run();
 	}
 
