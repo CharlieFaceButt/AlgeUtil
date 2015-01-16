@@ -6,15 +6,31 @@ public class MergeSorting implements IntSorting {
 	public int[] sort(int[] list) {
 		// TODO Auto-generated method stub
 		int len = list.length;
-		merge(list, 0, len >> 1, len);
+		merge_sort(list, 0, len - 1);
 		return list;
 	}
 	
-	public int[] customizedSort(int[] list, int start, int divide, int end){
-		merge(list,start,divide,end);
+	public int[] customizedSort(int[] list, int start, int end){
+		merge_sort(list,start,end);
 		return list;
 	}
 	
+	private int[] merge_sort(int[] list, int start, int end){
+		if(start < end){
+			int divide = (start + end) / 2;
+			list = merge_sort(list, start, divide);
+			list = merge_sort(list, divide + 1, end);
+			merge(list, start, divide, end);
+		}
+		return list;
+	}
+	/**
+	 * Merge the separate parts of the list
+	 * @param list
+	 * @param start, index of the first element
+	 * @param divide, index of the divider element
+	 * @param end, index of the last element
+	 */
 	private void merge(int[] list, int start, int divide, int end){
 		if(list == null) return;
 		

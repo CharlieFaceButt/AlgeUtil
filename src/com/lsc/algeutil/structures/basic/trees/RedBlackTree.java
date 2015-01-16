@@ -16,8 +16,11 @@ public class RedBlackTree<D> extends StandardBinaryTree<D> {
 	
 	@Override
 	public D Insert(Integer key, D data) {
+		/*parent of insert node*/
 		RedBlackTreeNode<D> parentNode = null;
+		/*node that check the key value*/
 		RedBlackTreeNode<D> node = (RedBlackTreeNode<D>)root;
+		/*locate the insert position*/
 		while(node != null){
 			parentNode = node;
 			if(key < node.getKey()) node = (RedBlackTreeNode<D>)(node.left);
@@ -29,17 +32,25 @@ public class RedBlackTree<D> extends StandardBinaryTree<D> {
 			}
 		}
 		
+		/*create node*/
 		RedBlackTreeNode<D> insert = new RedBlackTreeNode<D>(
 				1, key, data, null, null, parentNode);
+		/*if root not initiated*/
 		if(parentNode == null) root = insert;
+		/*insert node*/
 		else if(key < parentNode.getKey()) parentNode.left = insert;
 		else parentNode.right = insert;
 		
+		/*fix up the tree from the insert node to the top*/
 		RBInsertFixUp(insert);
 		return null;
 	};
 	
-	private void RBInsertFixUp(RedBlackTreeNode<D> insert){
+	/**
+	 * make sure the tree follow the red-black tree principle after insert
+	 * @param insert
+	 */
+	protected void RBInsertFixUp(RedBlackTreeNode<D> insert){
 		
 		/*parent node*/
 		RedBlackTreeNode<D> p = (RedBlackTreeNode<D>)(insert.parent);
@@ -143,18 +154,30 @@ public class RedBlackTree<D> extends StandardBinaryTree<D> {
 			node.setData(delete.getData());
 		}
 		
+		/*only if the deleted node is BLACK node that break the red-black principle*/
 		if(delete.getColor() == RedBlackTreeNode.BLACK)
-			RBDeleteFixUp(node);
+			RBDeleteFixUp(child);
 		return oldData;
 	}
 	
-	private void RBDeleteFixUp(RedBlackTreeNode<D> node){
+	/**
+	 * make sure the tree follow the red-black tree principle after delete
+	 * @param node
+	 */
+	protected void RBDeleteFixUp(RedBlackTreeNode<D> node){
+		
+		if(node == null) return;
+		
 		RedBlackTreeNode<D> p = null;
 		RedBlackTreeNode<D> uncle = null;
 		RedBlackTreeNode<D> uncleLeft = null;
 		RedBlackTreeNode<D> uncleRight = null;
+		
 		while(node != root && node.getColor() != RedBlackTreeNode.BLACK){
+			
 			p = (RedBlackTreeNode<D>)(node.parent);
+			
+			/*if the node is its parent's left child*/
 			if(node == p.left){
 				uncle = (RedBlackTreeNode<D>)(p.right);
 				if(uncle != null && uncle.getColor() == RedBlackTreeNode.RED){

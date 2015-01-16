@@ -18,7 +18,7 @@ structures
 	
 		 - direct addressed map
 		 - standard hash map
-		 - perfect hash map
+		 - perfect hash map(unfinished)
 	
 	 - trees
 	 	
@@ -26,3 +26,11 @@ structures
 	 	 	
 	 	 	 - red-black tree
 	 	 	 - AVL tree
+	 	 	 - treap(unfinished)
+
+algorithms
+
+	 - sorting
+
+	 	 - insertion
+	 	 - merge
